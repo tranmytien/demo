@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<menu type="Mac Horizontal Slider Pro v 2.0">
+	<media_to_load>
+		<sound level0_click_path="" level1_click_path="" level1_mouseover_path=""/>
+		<slider field_path="" left_arrow_path="" rihgt_arrow_path="" button_path=""/>
+	</media_to_load>
+	<menu_structure>
+		<item>
+			<item text="" url="" image="" open_window="" call_function_name="" call_function_parameter="">
+				<item text="Trang chủ" url="index.jsp" image="menu_data/1417715537_home-32.png" open_window="" call_function_name="" call_function_parameter=""/>
+				<item text="Thực đơn" url="ThucDon.jsp" image="menu_data/1417712227_food_pizza_fastfood_-32.png" open_window="" call_function_name="" call_function_parameter=""/>
+				<item text="Khuyến mãi" url="KhuyenMai.jsp" image="menu_data/1417715498_money-32.png" open_window="" call_function_name="" call_function_parameter=""/>
+				<item text="Liên hệ" url="LienHe.jsp" image="menu_data/1417715519_ic_settings_phone_48px-32.png" open_window="" call_function_name="" call_function_parameter=""/>
+				<item text="Đăng nhập" url="Login.jsp" image="menu_data/1417715550_user_male2-32.png" open_window="_self" call_function_name="" call_function_parameter=""/>
+				<item text="Giỏ hàng" url="Cart.jsp" image="menu_data/1417715586_icon-ios7-cart-32.png" open_window="_self" call_function_name="" call_function_parameter=""/>
+			</item>
+		</item>
+	</menu_structure>
+</menu>

@@ -1,0 +1,185 @@
+@charset "utf-8";
+#footer {
+	background-color: #000;
+	height: 50px;
+	width: 100%;
+	color: #FFF;
+}
+#header {
+	height: 140px;
+	width: 1351px;
+	margin-top: -10px;
+	margin-left: -10px;
+	background-color: #999;
+	font-size: 16px;
+	color: #FFF;
+	font-weight: bold;
+	font-style: normal;
+	margin-right: -10px;
+}
+#main #header #banner #tenNh {
+	height: 40px;
+	float: left;
+	margin-left: 100px;
+	font-size: 34px;
+	margin-top: 5px;
+}
+
+
+#body {
+	background-color: #FFF;
+	height: 1100px;
+	width: 960px;
+	margin-left: 200px;
+	background-image: url(../image/nenchinh.jpg);
+}
+.lienhe{
+	margin-left: -200px;
+	color: #810A15;
+	font-size: 20px;
+	
+}
+
+#main #header #menu {
+	background-color: #F00;
+	width: 100%;
+	height: 90px;
+	top: 0px;
+	left: 0px;
+	color: #FFF;
+	font-variant: normal;
+	text-transform: capitalize;
+	text-align: center;
+	white-space: normal;
+	
+}
+#main #header #banner {
+	width: 100%;
+	background-color: #000;
+	height: 50px;
+	font-size: 36px;
+	color: #FFF;
+}
+#main #body #qc {
+	width: 650px;
+	height: 500px;
+	float: left;
+	margin-top: 50px;
+}
+#anhlienhe {
+	padding-top: 20px;
+}
+#anhnhahang{
+	padding-top: 30px;
+}
+#main {
+	width: 100%;
+	height: 890px;
+}
+
+
+#formlienhe{
+	width: 500px;
+	padding-top: 0px;
+	margin-left: 70px;
+	float: left;
+	
+}
+#yahoo{
+	padding-top: 10px;
+}
+.rightyahoo{
+	margin-right: 15px;
+	width:185px;
+	float:right;
+	
+
+}
+#hoten{
+	width: 250px;
+	height:26px;
+	background: #F5E9DB;
+}
+#mail{
+	width: 100px;
+}
+#email{
+	float:left;
+	width: 250px;
+	height:26px;
+	background: #F5E9DB;
+}
+#tuoi{
+	width: 50px;
+	height:26px;
+	background: #F5E9DB;
+}
+#nghenghiep{
+	width:250px;
+	height:26px;
+	background: #F5E9DB;
+}
+#diachi{
+	height: 35px; 
+	margin: 0px; 
+	background: #F5E9DB;
+	width: 400px;
+}
+#dienthoai{
+	width: 120px;
+	background: #F5E9DB;
+	height:26px;
+	
+}
+#chonlua{
+	width: 150px;
+}
+#tieude{
+	width: 400px;
+	background: #F5E9DB;
+	height:26px;
+}
+#noidung{
+	width: 400px;
+	height: 120px;
+	background: #F5E9DB;
+	
+	
+}
+#antoan{
+	width: 100px;
+	height: 26px;
+	background: #F5E9DB;
+}
+#capcha{
+	width: 250px;
+	height: 150px
+	
+}
+.button{
+	color:#FFF;
+	background: #CF1023;
+	height: 25px;
+	width: 70px;
+}
+ #show {
+	border-radius: 10px;
+	height: 500px;
+	width: 100%;
+	margin-top: 10px;
+	margin-bot: 10px;
+	
+	
+}
+#form{
+	float:left;
+	width: 800px;
+	font-size: 16px;
+	color: #000;
+}
+.line{
+	color: #000;
+}
+#editor{
+	width: 300px;
+}
