@@ -1,0 +1,659 @@
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #4E5869;
+	margin: 0;
+	color: #000;
+	width: 1350px;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	font-size: 14px;
+	text-align: left;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.container {
+	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 780px; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	overflow: hidden; /* this declaration makes the .container clear all floated columns within it. */
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	width: 89%;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.row{
+	margin: 5px;
+	overflow: auto;
+	
+}
+.description-mini h3 {
+	color: #03F;
+	background-position: center;
+	text-align: left;
+	border-bottom-width: thin;
+	border-bottom-style: inset;
+	border-bottom-color: #03F;
+	padding-left: 5px;
+}
+
+.left{
+	width: 31%;
+	clear: right;
+	float: left;
+	
+}
+.mid{
+	clear: right;
+	float: left;
+	width: 32%;
+	margin-left: 3%;
+	
+}
+.right{
+	clear: none;
+	float: right;
+	width: 31%;
+	
+}
+.next1 {
+	background-color: #3FF;
+}
+.next{
+	padding-left: 480px;
+	
+}
+
+#ul{border:0; margin:0; padding:0;}
+ 
+#pagination-flickr li{
+border:0; margin:0; padding:0;
+font-size:11px;
+list-style:none;
+}
+ 
+#pagination-flickr a{
+border:solid 1px #DDDDDD;
+margin-right:2px;
+}
+ 
+#pagination-flickr .previous-off,
+#pagination-flickr .next-off{
+color:#666666;
+display:block;
+float:left;
+font-weight:bold;
+padding:3px 4px;
+}
+ 
+#pagination-flickr .next a,
+#pagination-flickr .previous a{
+font-weight:bold;
+border:solid 1px #FFFFFF;
+}
+ 
+#pagination-flickr .active{
+color:#ff0084;
+font-weight:bold;
+display:block;
+float:left;
+padding:4px 6px;
+}
+ 
+#pagination-flickr a:link,
+#pagination-flickr a:visited{
+color:#0063e3;
+display:block;
+float:left;
+padding:3px 6px;
+text-decoration:none;
+}
+ 
+#pagination-flickr a:hover{
+border:solid 1px #666666;
+}
+@charset "utf-8";
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	width: 1350px;
+	background-repeat: repeat-y;
+	background-attachment: fixed;
+	background-color: #FFF;
+	background-image: url(White-Background-32-1024x640.jpg);
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#414958;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #4E5869;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.container {
+	width: 89%;
+	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 780px; /* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	position: relative;
+	margin-top: 0;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+
+/* ~~the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo~~ */
+.container .header{
+	height: 200px;
+	width: 1200px;
+	background-image: url(16373-blue-white-swirls-design-wallpaper-background-picture-and-layout.jpg);
+	background-position: center;
+	
+}
+.container .header .leftheader{
+	width: 200px;
+	clear: right;
+	float: left;
+}
+.container .header .rightheader{
+	clear: none;
+	float: right;
+	height: 180px;
+	width: 1000px;
+}
+.menubutton{
+	height: 35px;
+	width: 120px;
+	clear: right;
+	float: left;
+	background-color: #FFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	text-align: center;
+	font-weight: normal;
+	list-style-type: none;
+	color: #F00;
+	font-size: 15px;
+	
+}
+.menubutton1{
+	clear: none;
+	float: right;
+	height: 35px;
+	width: 120px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	background-color: #FFF;
+	font-weight: normal;
+	text-align: center;
+	list-style-type: none;
+}
+.menubutton2{
+	height: 35px;
+	width: 180px;
+	clear: right;
+	float: left;
+	background-color: #FFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	text-align: center;
+	font-weight: normal;
+	list-style-type: none;
+}
+.menubutton3{
+	height: 35px;
+	width: 150px;
+	clear: right;
+	float: left;
+	background-color: #FFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	text-align: center;
+	font-weight: normal;
+	list-style-type: none;
+}
+.menubutton4{
+	height: 35px;
+	width: 160px;
+	clear: right;
+	float: left;
+	background-color: #FFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	text-align: center;
+	font-weight: normal;
+	list-style-type: none;
+	
+}
+.container .header .rightheader .topheader{
+	height: 160px;
+	border-top-style: dashed;
+	border-right-style: dashed;
+	border-bottom-style: dashed;
+	border-left-style: dashed;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	width: 995px;
+	
+}
+.container .header .rightheader .menu{
+	height: 60px;
+	list-style-type: none;
+	
+}
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+.content {
+	padding: 10px 0;
+	background-image: url(templatemo_wrapper_m.png);
+}
+.content .topcontent{
+	height: 400px;
+	background-color: #CCC;
+}
+.content .description{
+
+
+}
+.content .description .c1{
+	overflow: auto;
+	
+}
+.content .description .c1 .d1{
+	width: 350px;
+	clear: right;
+	float: left;
+	padding-left: 38px;
+	
+}
+.content .description .c1 .d1 .title{
+	background-color: #0CF;
+	color: #F00;
+}
+
+
+
+.content .description .c1 .d1 .description-mini{
+	background-image: url(templatemo_wrapper_m.png);
+}
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol {
+	padding-top: 0;
+	padding-right: 15px;
+	padding-bottom: 15px;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.myButton {
+	-moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+	background: -moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+
+
+
+
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
+	background-color: #bddbfa;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #84bbf3;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #528ecc;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	width: 120px;
+}
+.myButton:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
+	background: -moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background: -webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background: -o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background: -ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background: linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
+	background-color: #80b5ea;
+	color: #F00;
+}
+.myButton:active {
+	position: relative;
+	top: 1px;
+	color: #C8C8C8;
+}
+.myButton1 {
+	-moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+	background: -moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
+	background-color: #bddbfa;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #84bbf3;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #528ecc;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	width: 160px;
+}
+.myButton1:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
+	background:-moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
+	background-color:#80b5ea;
+}
+.myButton1:active {
+	position: relative;
+	top: 1px;
+	color: #FFFFFF;
+}
+.myButton2 {
+	-moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+	background: -moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
+	background-color: #bddbfa;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #84bbf3;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #528ecc;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	width: 180px;
+}
+.myButton2:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
+	background:-moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
+	background-color:#80b5ea;
+}
+.myButton2:active {
+	position:relative;
+	top:1px;
+}
+.myButton3 {
+	-moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+	background: -moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+
+
+
+
+
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
+	background-color: #bddbfa;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #84bbf3;
+	display: inline-block;
+	cursor: pointer;
+	color: #ffffff;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #528ecc;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	width: 150px;
+}
+.myButton3:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
+	background:-moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:-ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background:linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
+	background-color:#80b5ea;
+}
+.myButton3:active {
+	position:relative;
+	top:1px;
+}
+.menu .menubutton ul a{
+	-moz-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	box-shadow: inset 0px 1px 0px 0px #dcecfb;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bddbfa), color-stop(1, #80b5ea));
+	background: -moz-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -webkit-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -o-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: -ms-linear-gradient(top, #bddbfa 5%, #80b5ea 100%);
+	background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+
+
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bddbfa', endColorstr='#80b5ea',GradientType=0);
+	background-color: #bddbfa;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #84bbf3;
+	cursor: pointer;
+	color: #414958;
+	font-family: Arial;
+	font-size: 15px;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #528ecc;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	width: 150px;
+	padding-left: 10px;
+	display: inline-block;
+}
+ 
+.menu .menubutton ul{
+	position: absolute;
+	display: none;
+	width: 150px;
+	list-style-type: none;
+	border-top-color: #F00;
+	border-right-color: #F00;
+	border-bottom-color: #F00;
+	border-left-color: #F00;
+	z-index:999;
+}
+ 
+.menu .menubutton:hover ul{
+	text-align: left;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #80b5ea), color-stop(1, #bddbfa));
+	background: -moz-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background: -webkit-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background: -o-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background: -ms-linear-gradient(top, #80b5ea 5%, #bddbfa 100%);
+	background: linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+
+
+
+
+
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80b5ea', endColorstr='#bddbfa',GradientType=0);
+	background-color: #80b5ea;
+	display: block;
+}
+#eff6 {
+	color: #0066FF;
+	font-size: 46px;
+}
+#eff6 p {
+	color: #FF0000;
+	cursor: pointer;
+	display: inline-block;
+	-webkit-transition: .5s;
+	-moz-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+#eff6 p:hover {
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+
+    -0-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2)
+; 	color: #FF0000;
+}

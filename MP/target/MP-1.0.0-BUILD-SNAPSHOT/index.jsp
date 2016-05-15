@@ -1,1 +1,0 @@
-<%response.sendRedirect("myphamDEP/hello");%>
